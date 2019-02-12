@@ -66,7 +66,7 @@ class TasksController < ApplicationController
   #必要なカラムだけを選択し
   
   def task_params
-    params.require(:task).permit(:content)
+    params.require(:task).permit(:content, :status)
   end
 
 end
