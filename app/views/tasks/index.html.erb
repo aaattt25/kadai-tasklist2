@@ -2,13 +2,10 @@
 
 <ul>
   <% @tasks.each do |task| %>
-<!--link_to 表示文字列, Model のインスタンス（レコード）→ show アクションへとリンクされる-->
-<!--省略せずに書くと-->
-<!--<li><%= link_to task.id, task_path(task) %>：<%= task.content %></li>-->
     <li><%= link_to task.id, task %>：<%= task.content %> &gt; <%= task.status %></li>
   <% end %>
 </ul>
 
 <%= paginate @tasks %>
-<%= link_to '新規タスクの投稿', new_task_path %>
+<%= link_to '新規タスクの投稿', new_task_path, class: "btn btn-primary" %>
 
